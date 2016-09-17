@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    var arr=[1,2,3,4,5];
+    //map的回调函数有三个参数，第一个参数是当前元素，第二个参数是当前元素的索引，第三个参数是当前的数组对象。
+    //map函数不会改变原数组。
+    var brr=arr.map(function(v,i,r){
+//        return 2*i;
+        r.push(6);
+        if(i===3){
+            return null;
+        }else {
+            return v*2;
+        }
+    });
+    console.log(arr);
+    console.log(brr);
+
+</script>
