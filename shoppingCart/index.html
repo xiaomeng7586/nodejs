@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns: xmlns: xmlns: xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>购物车demo</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="description" content="不超过150个字符"/>
+    <meta name="keywords" content=""/>
+    <meta content="caibaojian" name="author"/>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/base.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div id="app">
+    <div class="title">
+        <ul>
+            <li class="checked">{{title}}</li>
+        </ul>
+    </div>
+    <ul class="list">
+        <li v-for="item in productList" draggable="true">
+            <span class="check-box" v-bind:class="{'checked':item.checked}" @click="changeCheck(item)"></span>
+            <a href=""><img class="shop-img" v-bind:src="item.imgSrc" alt=""></a>
+            <div class="message">
+                <a href=""><h4>{{item.text}}</h4></a>
+                <span class="lables">单价：</span>
+                <span class="price">{{item.price | formatMoney("元")}}</span>
+                <br>
+                <span class="lables">总金额：</span>
+                <span class="price">{{item.price*item.productAmount | formatMoney("元")}}</span>
+                <div class="count">
+                    <span v-on:click="changeAmount(item,-1)">-</span>
+                    <input class="count-input" type="text" v-model="item.productAmount">
+                    <span v-on:click="changeAmount(item,1)">+</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="submits">
+        <span class="select-all" v-bind:class="{'checked':checkAllFlag}" @click="checkAll(checkAllFlag)">全选</span>
+        <div class="pay">马上付款</div>
+        <p class="total-price">{{totalMoney | formatMoney("元")}}</p>
+    </div>
+</div>
+<script src="js/axios.min.js"></script>
+<script src="node_modules/_vue@2.5.16@vue/dist/vue.min.js"></script>
+<script src="node_modules/_vue-resource@1.5.1@vue-resource/dist/vue-resource.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

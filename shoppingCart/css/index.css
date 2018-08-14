@@ -1,0 +1,186 @@
+
+#app {
+    width: 7.5rem;
+    height: 15.8rem;
+    background-color: #fff9ec;
+}
+.title,.title ul {
+    width: 7.5rem;
+    height: 0.84rem;
+    background-color: #ffe9c2;
+    display: flex;
+}
+.title ul li {
+    flex-basis: 7.5rem;
+    height: 0.84rem;
+    float: left;
+    text-align: center;
+    line-height: 0.84rem;
+    box-sizing: border-box;
+    flex-shrink:1;
+}
+.title ul li.checked {
+    border-bottom:3px solid #ff9f40;
+}
+.list li {
+    width: 7.5rem;
+    height: 4rem;
+    box-sizing: border-box;
+    border-bottom:1px solid rosybrown;
+}
+.check-box {
+    width: .42rem;
+    height: .42rem;
+    float: left;
+    margin-left: .2rem;
+    margin-top: 1.8rem;
+    background-color: goldenrod;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+.check-box.checked:after {
+    content: "✔";
+    width: .42rem;
+    height: .42rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 0.39rem;
+    background-color: goldenrod;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+.shop-img {
+    float: left;
+    width: 2.5rem;
+    height: 3rem;
+    margin-left: .21rem;
+    margin-top: 0.45rem;
+}
+.message {
+    float: left;
+    box-sizing: border-box;
+    margin-top: 0.45rem;
+    width: 4.1rem;
+    height: 3rem;
+    position: relative;
+}
+.message>a>h4 {
+    font-size: 0.28rem;
+    color: #3f9eff;
+    padding-left: .2rem;
+    padding-right: .1rem;
+}
+.price {
+    font-size: 0.36rem;
+    color: #f35a0d;
+    font-weight: 700;
+    margin-top: 1rem;
+    /*line-height: 1rem;*/
+}
+.lables {
+    margin-left: .2rem;
+}
+.count {
+    width: 4.1rem;
+    height: 0.42rem;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.count span,.count input {
+    float: left;
+}
+.count span {
+    width: .41rem;
+    height: .41rem;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: .41rem;
+    font-weight: 700;
+    border: 1px solid #3c3c3c;
+    background-color: #fff;
+}
+.count span:nth-child(1) {
+    margin-left: 2.3rem;
+}
+.count input {
+    width: .82rem;
+    height: .41rem;
+    box-sizing: border-box;
+    border-top: 1px solid #3c3c3c;
+    border-bottom: 1px solid #3c3c3c;
+    text-align: center;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+}
+.submits {
+    width: 7.5rem;
+    height: 0.84rem;
+    background: #f9e284;
+}
+.select-all {
+    display: block;
+    float: left;
+    margin-left: 0.83rem;
+    width: .84rem;
+    height: .42rem;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    margin-top: 0.2rem;
+}
+.select-all:after {
+    content: "";
+    width: .42rem;
+    height: .42rem;
+    background-color: goldenrod;
+    border-radius: 50%;
+    position: absolute;
+    left: -0.6rem;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+.select-all.checked:after {
+    content: "✔";
+    width: .42rem;
+    height: .42rem;
+    line-height: 0.39rem;
+    color: #fff;
+    font-weight: 700;
+    background-color: goldenrod;
+    border-radius: 50%;
+    position: absolute;
+    left: -0.6rem;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+}
+.total-price,.pay {
+    float: right;
+}
+.pay {
+    width: 2rem;
+    height: 0.84rem;
+    text-align: center;
+    line-height: 0.84rem;
+    background-color: #ff7824;
+    color: #fff;
+}
+.total-price {
+    font-size: 0.36rem;
+    color: #f35a0d;
+    font-weight: 700;
+    line-height: 0.86rem;
+    margin-left: 0.2rem;
+    margin-right: .5rem;
+}
