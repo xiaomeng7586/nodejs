@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='m-border' bindtap='hideList'>
+   <image src='http://132.232.41.183:8080/wxImg/bg.png'></image>
+  </view>
+  <scroll-view scroll-y class='music-list' wx:if="{{showList}}" >
+    <view  bindtap='choiseMusic' wx:for="{{musicList}}" data-index="{{index}}" class='{{index==count?"checked":"none"}}' wx:key="">{{item.name + "-" +item.singer}}</view>
+  </scroll-view>
+  <view class='music-name'>{{name + "-" +singer}}</view>
+  <!-- game  -->
+  <view class='stepsV' bindtap='hideList'>{{'步数：'+steps}}</view>
+  <view class='congratulation' wx:if="{{congratulations}}">恭喜你，完成了拼图！</view>
+  <view class='puzzle'>
+    <image  wx:for="{{puzzleList}}" wx:key="ids" bindtap='changePosition' class='pusz' id="{{item.id}}" src='{{item.src}}'></image>
+  </view>
+  <view class='currentTime'>
+    <view class='bufferedTime' style="width:{{bufferedWidth}}"></view>
+    <view class='nowTime' style="width:{{nowWidth}}"></view>
+  </view>
+  <view class='music-controls'>
+    <view class='play'>
+      <image wx:if="{{playMusicImg}}" bindtap="playMusic" src='{{playImg}}'></image>
+      <image wx:if="{{!playMusicImg}}" bindtap="pauseMusic" src='{{pauseImg}}'></image>      
+    </view>
+    <view class='prev'>
+      <image bindtap="prevMusic" src='http://132.232.41.183:8080/wxImg/prev.png'></image>
+    </view>
+    <view class='next'>
+      <image bindtap="nextMusic" src='http://132.232.41.183:8080/wxImg/next.png'></image>
+    </view>
+     <view class='m-list'>
+      <image bindtap="getMusicList" src='http://132.232.41.183:8080/wxImg/list.png'></image>
+    </view>
+  </view>
+</view>

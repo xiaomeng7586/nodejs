@@ -1,0 +1,285 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 12rpx;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.container {
+ width: 750rpx;
+ height:100vh;
+ padding: 0rpx;
+ margin: 0rpx;
+}
+.m-border image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1
+}
+.m-border {
+  width: 750rpx;
+  height:100vh;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.bg-top {
+  width: 750rpx;
+  height: 50vh;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  
+}
+.bg-bottom {
+  width: 750rpx;
+  height: 50vh;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.bg-top image,.bg-bottom image {
+  width: 750rpx;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.2;
+}
+.top-cover {
+  width: 750rpx;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 3;
+  animation: 3s linear topCover forwards;
+}
+.bottom-cover {
+  width: 750rpx;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 3;
+  animation: 3s linear 3s topCover forwards;
+}
+@keyframes topCover {
+  0%{height: 50vh;}
+  100%{height: 0vh;}
+}
+.music-name {
+  width: 750rpx;
+  height: 80rpx;
+  background: #d3cff5;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 80rpx;
+  color: #000;
+  font-family: "楷体";
+  z-index: 3;
+}
+.music-controls {
+  width: 750rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: rgba(36, 24, 209,0.2);
+}
+.play {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 50%;
+  top: 20rpx;
+  transform: translateX(-50%);
+}
+.music-controls image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.prev {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 30%;
+  top: 20rpx;
+  transform: translateX(-50%);
+}
+.next {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 70%;
+  top: 20rpx;
+  transform: translateX(-50%);
+}
+.m-list {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  left: 10%;
+  top: 20rpx;
+  transform: translateX(-50%);
+}
+swiper {
+  width: 750rpx;
+  height:calc(100vh - 200rpx);
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top:80rpx;
+}
+swiper block swiper-item image {
+  width: 100%;
+  height:calc(100vh - 200rpx);
+}
+.currentTime {
+  width: 750rpx;
+  height: 15rpx;
+  position: absolute;
+  left: 0;
+  bottom: 120rpx;
+  background: rgb(116, 111, 111);
+  padding: 0;
+  margin: 0;
+}
+.nowTime {
+  /* width: 30%; */
+  height: 15rpx;
+  background: rgb(5, 110, 248);
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+.bufferedTime {
+  height: 15rpx;
+  background: rgb(128, 165, 212);
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+.nowTime::after {
+  /* content: ""; */
+  width: 31rpx;
+  height: 31rpx;
+  background: rgb(19, 187, 238);
+  position: absolute;
+  right: -8rpx;
+  top: -8rpx;
+  border-radius: 50%;
+  z-index:30; 
+}
+.puzzle {
+  width: 720rpx;
+  height: 720rpx;
+  position: absolute;
+  left: 15rpx;
+  top:185rpx;
+  border:1rpx solid  #000;
+  background: #fff;
+  z-index: 20;
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: 0;
+}
+.puzzle .pusz{
+  width: 240rpx;
+  height: 240rpx;
+  float: left;
+  padding: 0;
+  margin: 0;
+  /* box-sizing: border-box; */
+  transition: 1s linear;
+}
+.stepsV {
+  width: 750rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: red;
+  font-family: "楷体";
+  position: absolute;
+  left: 0;
+  top: 80rpx;
+  z-index: 10;
+  font-weight: 700;
+}
+.congratulation {
+  width: 750rpx;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  top: 910rpx;
+  text-align: center;
+  color: green;
+  line-height: 100rpx;
+  font-family: "楷体";
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.music-list{
+  width: 500rpx;
+  height: 700rpx;
+  /* overflow: scroll; */
+  position: absolute;
+  left: 0;
+  bottom: 135rpx;
+  border:1rpx solid  #000;
+  z-index: 50;
+  background:rgba(168, 163, 233, 0.8);
+  color: #fff;
+  font-family: "楷体";
+  font-size: 32rpx;
+  line-height: 50rpx;
+  padding: 0;
+  margin: 0;
+}
+.music-list view {
+  width: 100%;
+  height: 50rpx;
+  overflow: hidden;
+  text-indent: 15rpx;
+  padding: 0;
+  margin: 0;
+}
+.music-list view.checked {
+  background: rgba(0, 0, 0, 0.678);
+}
